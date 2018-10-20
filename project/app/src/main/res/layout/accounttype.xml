@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/creator"
-        android:layout_width="160"
+        android:layout_width="160px"
         android:layout_height="80px"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
