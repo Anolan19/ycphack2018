@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/newproject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create Project"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="72dp" />
+    <ImageView
+        android:id="@+id/userimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/searchprojects"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search Projects"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="150dp" />
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="132dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="Username"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="195dp" />
 
-    <Button
-        android:id="@+id/myprojects"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="My Projects"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="249dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Bio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/viewprofile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Profile"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="354dp" />
 </android.support.constraint.ConstraintLayout>
