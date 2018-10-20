@@ -2,6 +2,8 @@ package com.example.a.ycphack2018;
 
 import android.graphics.Bitmap;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -10,6 +12,7 @@ enum Tag {webdev, business, science, SRE, HCI}
 
 public class account
 {
+    private static final String databaseTAG = "server/accounts";
     private String name;        //user name
     private int[] rating;       //user rating as a ratio of totalratings : totalmax
     private String bio;         //self-inserted user bio
@@ -31,5 +34,10 @@ public class account
     }
     public void setPfp(Bitmap newpfp)
     {   this.profilepic = newpfp;
+    }
+    public static account getFromDatabase(String key ){
+        account a = FirebaseDatabase.getInstance().getReference(databaseTAG).;
+
+                return a;
     }
 }
