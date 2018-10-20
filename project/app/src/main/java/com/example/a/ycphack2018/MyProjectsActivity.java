@@ -5,8 +5,13 @@ import android.os.Bundle;
 
 public class MyProjectsActivity extends AppCompatActivity {
 
+    String emailString;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
+        emailString = getIntent().getExtras().getString("email");
+        setContentView(R.layout.myprojects);
     }
 }

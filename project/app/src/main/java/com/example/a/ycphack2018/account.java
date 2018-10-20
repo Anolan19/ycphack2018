@@ -51,6 +51,7 @@ public class account
     }
     public void addIdea(listing newIdea)        //tell the bros about this
     {   this.ideas.add(newIdea.key);                //also note lack of ability to remove ideas
+
         this.addListing(newIdea);
     }
 
