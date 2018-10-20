@@ -9,3 +9,6 @@
 /captures
 .externalNativeBuild
 /app/.google-settings.json
+app/google-services.json
+app/.google-services.json
+/app/.google-services.json
