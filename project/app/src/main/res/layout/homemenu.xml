@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/searchprojects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Projects"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <Button
+        android:id="@+id/viewprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="302dp" />
+
+    <Button
+        android:id="@+id/newproject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Project"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="138dp" />
+
+    <Button
+        android:id="@+id/myprojects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Projects"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="58dp" />
 </android.support.constraint.ConstraintLayout>
