@@ -80,8 +80,9 @@ public class listing {
 
     public void updateIdea(account a, String s){
         ideaCat.put(a,s);
+        //dsfkgjidfsbgibriuegbuifebiu
     }
 
-    
+
 
 }
