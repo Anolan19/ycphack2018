@@ -17,8 +17,8 @@ public class account
     private String email;               //user email
     private int[] rating;               //user rating as a ratio of totalratings : totalmax
     private String bio;                 //self-inserted user bio
-    private ArrayList<listing> listings;//listings user is in
-    private ArrayList<listing> ideas;   //listings user has created
+    private ArrayList<String> listings;//listings user is in
+    private ArrayList<String> ideas;   //listings user has created
     private Bitmap profilepic;
     private ArrayList<Tag> user_tags;
 
@@ -44,16 +44,17 @@ public class account
     {   this.user_tags.remove(oldtag);
     }
     public void addListing(listing newlisting)
-    {   this.listings.add(newlisting);
+    {   this.listings.add(newlisting.key);
     }
     public void removeListing(listing oldlisting)
     {   this.listings.remove(oldlisting);
     }
     public void addIdea(listing newIdea)        //tell the bros about this
-    {   this.ideas.add(newIdea);                //also note lack of ability to remove ideas
+    {   this.ideas.add(newIdea.key);                //also note lack of ability to remove ideas
+
         this.addListing(newIdea);
     }
 
-    
+
 
 }

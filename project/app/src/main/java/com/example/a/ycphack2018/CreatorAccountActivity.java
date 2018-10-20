@@ -33,6 +33,7 @@ public class CreatorAccountActivity extends AppCompatActivity {
             account userAccount = new account(displayNameString, bioString, emailString,
                     null, null);
             //add the user account to the database
+            accountIntent.putExtra("email", emailString);
             startActivity(accountIntent);//go to HomeMenuActivity--your account dashboard
         }
         else; //display error message, "Not a recognized user/password combo" etc.

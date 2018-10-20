@@ -17,6 +17,7 @@ public class listing {
     private int outOf;
     private boolean isPrivate;
     private Bitmap icon;
+    public String key;
 
     public listing(account init, String disc, String shortdes, Bitmap pic){
         this.lister=init;
