@@ -44,4 +44,14 @@
         android:text="bio"
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="299dp" />
+
+    <EditText
+        android:id="@+id/displayname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Display Name"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
