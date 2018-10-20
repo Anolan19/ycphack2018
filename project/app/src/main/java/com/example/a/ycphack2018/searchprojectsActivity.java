@@ -21,23 +21,7 @@ public class searchprojectsActivity extends AppCompatActivity {
         setContentView(R.layout.searchprojects);
         final ArrayList<account> listofEvents= new ArrayList<>();
 
-        FirebaseDatabase.getInstance().getReference().child("listing").orderByChild("score").addValueEventListener(new ValueEventListener(){
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Iterator<DataSnapshot> children = dataSnapshot.getChildren().iterator();
-                while(children.hasNext()&&listofEvents.size()<30){
-                    DataSnapshot childSnapshot = (DataSnapshot) children.next();
-                    account a = (account) childSnapshot.getValue();
-                    listofEvents.add(a);
-                }
 
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            Log.i("DATABASECONNERR",databaseError.toString());
-            }
-        });
 
     }
 }

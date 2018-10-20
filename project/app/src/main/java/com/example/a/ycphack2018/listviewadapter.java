@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.a.ycphack2018.R;
+import com.example.a.ycphack2018.*;
 
 class ListViewAdapter extends ArrayAdapter<String> {
 
