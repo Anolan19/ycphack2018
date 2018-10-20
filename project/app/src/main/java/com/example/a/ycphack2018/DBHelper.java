@@ -2,7 +2,6 @@ package com.example.a.ycphack2018;
 
 import android.content.Context;
 import android.view.View;
-import com.google.common.io.*;
 
 
 import java.io.File;
