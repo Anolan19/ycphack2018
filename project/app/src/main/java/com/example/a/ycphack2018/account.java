@@ -49,8 +49,8 @@ public class account
     public void removeListing(listing oldlisting)
     {   this.listings.remove(oldlisting);
     }
-    public void addIdea(listing newIdea)        //tell the bros about this
-    {   this.ideas.add(newIdea);                //also note lack of ability to remove ideas
+    public void addIdea(listing newIdea)
+    {   this.ideas.add(newIdea);
         this.addListing(newIdea);
     }
 
