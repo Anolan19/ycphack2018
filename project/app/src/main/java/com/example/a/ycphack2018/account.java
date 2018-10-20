@@ -7,8 +7,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-enum School {susky, york, umd}
-enum Tag {webdev, business, science, SRE, HCI}
+ enum Tag {susky, york, umd,webdev, business, science, SRE, HCI}
 
 public class account
 {
@@ -21,16 +20,13 @@ public class account
     private ArrayList<listing> listings;//listings user is in
     private ArrayList<listing> ideas;   //listings user has created
     private Bitmap profilepic;
-    private School user_school;
     private ArrayList<Tag> user_tags;
 
-    public account(String name, String bio, String email,
-                   School school, ArrayList<Tag> tags, Bitmap profilepic)
+    public account(String name, String bio, String email, ArrayList<Tag> tags, Bitmap profilepic)
     {
         this.name = name;
         this.email = email;
         this.bio = bio;
-        this.user_school = school;
         this.user_tags = tags;
         this.profilepic = profilepic;
     }
@@ -41,9 +37,6 @@ public class account
     {   this.profilepic = newpfp;
     }
 
-    public void setSchool(School newschool)
-    {   this.user_school = newschool;
-    }
     public void addTag(Tag newtag)
     {   this.user_tags.add(newtag);
     }
@@ -60,5 +53,7 @@ public class account
     {   this.ideas.add(newIdea);                //also note lack of ability to remove ideas
         this.addListing(newIdea);
     }
+
+    
 
 }
