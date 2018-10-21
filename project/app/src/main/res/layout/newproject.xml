@@ -8,7 +8,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ScrollView
             android:id="@+id/scrolling"
@@ -83,7 +85,7 @@
                 <EditText
                     android:id="@+id/longpublic"
                     android:layout_width="323dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="96dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
@@ -108,7 +110,7 @@
                 <EditText
                     android:id="@+id/privatedescription"
                     android:layout_width="323dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="98dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
@@ -121,6 +123,17 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <Button
+            android:id="@+id/createproject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Create Project"
+            app:layout_constraintBottom_toBottomOf="@+id/scrolling"
+            app:layout_constraintEnd_toStartOf="@+id/scrolling"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scrolling" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
