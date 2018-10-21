@@ -2,23 +2,23 @@ package com.example.a.ycphack2018;
 
 import android.graphics.Bitmap;
 
-import com.google.firebase.database.FirebaseDatabase;
-
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
- enum Tag {susky, york, umd,webdev, business, science, SRE, HCI}
+enum Tag {susky, york, umd,webdev, business, science, SRE, HCI}
 
-public class account
+public class account implements Serializable
 {
     private static final String databaseTAG = "server/accounts";
 
+    private static int key;             //random unique key, for easy database access
     private String name;                //user name
     private String email;               //user email
     private int[] rating;               //user rating as a ratio of totalratings : totalmax
     private String bio;                 //self-inserted user bio
-    private ArrayList<String> listings;//listings user is in
-    private ArrayList<String> ideas;   //listings user has created
+    private ArrayList<Integer> listings;    //listings user is in
+    private ArrayList<Integer> ideas;       //listings user has created
     private Bitmap profilepic;
     private ArrayList<Tag> user_tags;
 
@@ -30,6 +30,10 @@ public class account
         this.user_tags = tags;
         this.profilepic = profilepic;
     }
+
+    public String getName() { return this.name; }
+    public int getKey() { return this.key; }
+
     public void setBio(String newbio)
     {   this.bio = newbio;
     }
@@ -44,13 +48,13 @@ public class account
     {   this.user_tags.remove(oldtag);
     }
     public void addListing(listing newlisting)
-    {   this.listings.add(newlisting.key);
+    {   this.listings.add(newlisting.getKey());
     }
     public void removeListing(listing oldlisting)
     {   this.listings.remove(oldlisting);
     }
     public void addIdea(listing newIdea)        //tell the bros about this
-    {   this.ideas.add(newIdea.key);                //also note lack of ability to remove ideas
+    {   this.ideas.add(newIdea.getKey());                //also note lack of ability to remove ideas
 
         this.addListing(newIdea);
     }
