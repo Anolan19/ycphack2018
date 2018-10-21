@@ -15,16 +15,13 @@ import java.util.function.Consumer;
 
 public class searchprojectsActivity extends AppCompatActivity {
 
+    DBHelper db = new DBHelper(this,null,null,0);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.searchprojects);
-         ArrayList<account> listofEvents= new ArrayList<>();
-         DBHelper j = new DBHelper(this,null,null,0);
 
-         ArrayList<listing> ad = j.findListing();
-
-
-
+        ArrayList<listing> projectsList = db.findListing("");
     }
 }
