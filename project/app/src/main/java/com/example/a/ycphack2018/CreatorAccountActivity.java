@@ -37,7 +37,7 @@ public class CreatorAccountActivity extends AppCompatActivity {
             accountIntent.putExtra("email", emailString);
             startActivity(accountIntent);//go to HomeMenuActivity--your account dashboard
         }
-        else;{
+        else{
             //display error message, "Not a recognized user/password combo" etc.
         Toast.makeText(this, "Please enter a valid university email address!", Toast.LENGTH_LONG).show();
 
