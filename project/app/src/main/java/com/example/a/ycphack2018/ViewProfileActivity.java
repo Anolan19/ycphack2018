@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
-public class EditProfileActivity extends AppCompatActivity {
+public class ViewProfileActivity extends AppCompatActivity {
 
     int emailString;
     DBHelper db;
@@ -17,7 +17,7 @@ public class EditProfileActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         emailString = getIntent().getExtras().getInt("email");
-        setContentView(R.layout.editprofile);
+        setContentView(R.layout.publicprofile);
 
         displayName = findViewById(R.id.displayname);
         userbio = findViewById(R.id.bio);

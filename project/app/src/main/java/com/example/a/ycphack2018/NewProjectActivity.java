@@ -21,8 +21,8 @@ public class NewProjectActivity extends AppCompatActivity {
         setContentView(R.layout.newproject);
     }
 
-    public void onMakeProject(View v)//called when user presses "searchprojects" button
-    {   Intent madeProject = new Intent(this, searchprojectsActivity.class);
+    public void onMakeProject(View v)//called when user presses "createproject" button
+    {   Intent madeProject = new Intent(this, HomeMenuActivity.class);
         madeProject.putExtra("email", emailString);
 
         DBHelper db = new DBHelper(this,null,null,4);
@@ -31,11 +31,10 @@ public class NewProjectActivity extends AppCompatActivity {
         String descShort = ((EditText) findViewById(R.id.shortdescription) ).getText().toString();
         ImageView img = (ImageView) findViewById(R.id.icon);
 
-
         account projectCreator = db.getAccount(emailString);
         listing newlisting = new listing(title,projectCreator,descPrivate,descShort,null);
         db.addListing(newlisting);
         startActivity(madeProject);
-        //go to searchprojectsActivity, where user can search thru all projects in database
+        //go to HomeMenuActivity for now
     }
 }
