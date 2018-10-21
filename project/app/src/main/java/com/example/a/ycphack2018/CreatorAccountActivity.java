@@ -33,18 +33,18 @@ public class CreatorAccountActivity extends AppCompatActivity {
         {   Intent accountIntent = new Intent(this, HomeMenuActivity.class);
             account userAccount = new account(displayNameString, bioString, emailString,
                     null, null);
-            //add the user account to the database
+            //pass user email into a bundle
             accountIntent.putExtra("email", userAccount.getKey());
-
-            DBHelper b = new DBHelper(this,"chad thundercock",null,0);
-            b.addAccount(userAccount);
+            //add the user account to the database
+            DBHelper db = new DBHelper(this,"chad thundercock",null,0);
+            db.addAccount(userAccount);
             startActivity(accountIntent);//go to HomeMenuActivity--your account dashboard
         }
-        else{
+        else {
             //display error message, "Not a recognized user/password combo" etc.
-        Toast.makeText(this, "Please enter a valid university email address!", Toast.LENGTH_LONG).show();
-
-    }
+            Toast.makeText(this, "Please enter a valid university email address!",
+                Toast.LENGTH_LONG).show();
+        }
     }
     public boolean userVerify(String email, String password)
     {   /*
@@ -54,11 +54,7 @@ public class CreatorAccountActivity extends AppCompatActivity {
         - check that the email and password match
         */
 
-        if (!(email.contains("@")&&email.contains(".edu"))){
-        return false;
-        }
-        else{
-            return true;
-        }
+        if (!(email.contains("@")&&email.contains(".edu"))) return false;
+        else return true;
     }
 }
