@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Like Tinder but for kickstarter");
     }
     public void onLogin(View v) //called when user presses "login" button
     {   Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
