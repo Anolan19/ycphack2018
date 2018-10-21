@@ -19,6 +19,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:cacheColorHint="@color/colorPrimary"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@+id/searchprojects"
         tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>
