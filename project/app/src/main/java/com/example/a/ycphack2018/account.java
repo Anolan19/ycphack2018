@@ -12,7 +12,7 @@ public class account implements Serializable
 {
     private static final String databaseTAG = "server/accounts";
 
-    private static int key;             //random unique key, for easy database access
+    private  int key;             //random unique key, for easy database access
     private String name;                //user name
     private String email;               //user email
     private int[] rating;               //user rating as a ratio of totalratings : totalmax
@@ -29,6 +29,7 @@ public class account implements Serializable
         this.bio = bio;
         this.user_tags = tags;
         this.profilepic = profilepic;
+        this.key=
     }
 
     public String getName() { return this.name; }

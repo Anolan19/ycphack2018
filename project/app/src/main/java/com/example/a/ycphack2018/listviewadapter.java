@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.a.ycphack2018.*;
@@ -29,17 +30,20 @@ class ListViewAdapter extends ArrayAdapter<String> {
             dataView = mLayoutInflater.inflate(R.layout.listitem, parent, false);
             // Cache View information in ViewHolder Object
             ViewHolder viewHolder = new ViewHolder();
-            viewHolder.text = dataView.findViewById(R.id.text);
+            viewHolder.shortdes=dataView.findViewById(R.id.shortdescription);
+            viewHolder.projecttitle=dataView.findViewById(R.id.projecttitle);
+            viewHolder.icon=dataView.findViewById(R.id.icon);
             dataView.setTag(viewHolder);
         }
 
-        // Set the View's data
 
         // Retrieve the viewHolder Object
         ViewHolder storedViewHolder = (ViewHolder) dataView.getTag();
 
         //Set the data in the data View
-        storedViewHolder.text.setText(getItem(position));
+        storedViewHolder.projecttitle.setText(getItem(position));
+        storedViewHolder.shortdes.setText((getItem(position)));
+        storedViewHolder.icon.setImageResource((int) getItemId(position));
 
         return dataView;
     }
@@ -47,7 +51,9 @@ class ListViewAdapter extends ArrayAdapter<String> {
     // The ViewHolder class. See:
     // http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder
     static class ViewHolder {
-        TextView text;
+        TextView shortdes;
+        TextView projecttitle;
+        ImageView icon;
     }
 }
 
