@@ -32,6 +32,7 @@ public class listing implements Serializable
 
     public String getTitle() { return this.title; }
     public int getKey() { return this.key; }
+    public boolean checkPrivate() { return this.isPrivate; }
 
     public void makePrivate(){
         this.isPrivate=true;
