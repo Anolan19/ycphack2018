@@ -35,6 +35,8 @@ public class account implements Serializable
     public String getName() { return this.name; }
     public int getKey() { return this.key; }
 
+    public String getBio() { return bio; }
+
     public void setBio(String newbio)
     {   this.bio = newbio;
     }
