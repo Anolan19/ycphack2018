@@ -21,7 +21,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         displayName = findViewById(R.id.displayname);
         userbio = findViewById(R.id.bio);
-        db = new DBHelper(this,null,null,2092939);
+        db = new DBHelper(this,null,null,1);
         userAccount = db.getAccount(emailString);
         displayName.setText(userAccount.getName());
         userbio.setText(userAccount.getBio());
