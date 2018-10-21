@@ -9,10 +9,8 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ScrollView
             android:id="@+id/scrolling"
@@ -61,7 +59,7 @@
                         android:layout_marginTop="24dp"
                         android:layout_marginEnd="16dp"
                         android:ems="10"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="@font/ubuntu_light"
                         android:hint="Project Title"
                         android:inputType="textPersonName"
                         android:textColor="@color/colorPrimary"
@@ -80,7 +78,6 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:ems="10"
-                    android:fontFamily="@font/ubuntu"
                     android:hint="Short Description (Max 280 Characters)"
                     android:inputType="textMultiLine"
                     app:layout_constraintBottom_toTopOf="@+id/longpublic"
@@ -97,7 +94,6 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:ems="10"
-                    android:fontFamily="@font/ubuntu"
                     android:hint="Public Description"
                     android:inputType="textMultiLine"
                     app:layout_constraintBottom_toTopOf="@+id/privatedescription"
@@ -122,7 +118,6 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:ems="10"
-                    android:fontFamily="@font/ubuntu"
                     android:hint="Additional Info (Private)"
                     android:inputType="textMultiLine"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -139,9 +134,8 @@
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/colorPrimaryDark"
             android:elevation="1dp"
-            android:fontFamily="@font/ubuntu"
             android:text="Create Project"
-            android:textStyle="bold"
+            android:onClick="onMakeProject"
             app:layout_constraintBottom_toBottomOf="@+id/scrolling"
             app:layout_constraintEnd_toStartOf="@+id/scrolling"
             app:layout_constraintHorizontal_bias="0.5"
