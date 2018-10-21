@@ -25,16 +25,16 @@ public class NewProjectActivity extends AppCompatActivity {
     {   Intent madeProject = new Intent(this, searchprojectsActivity.class);
         madeProject.putExtra("email", emailString);
 
-        DBHelper b = new DBHelper(this,null,null,4);
-        String s = ((EditText) findViewById(R.id.projecttitle) ).getText().toString();
-        String s2 = ((EditText) findViewById(R.id.privatedescription) ).getText().toString();
-        String s3 = ((EditText) findViewById(R.id.shortdescription) ).getText().toString();
+        DBHelper db = new DBHelper(this,null,null,4);
+        String title = ((EditText) findViewById(R.id.projecttitle) ).getText().toString();
+        String descPrivate = ((EditText) findViewById(R.id.privatedescription) ).getText().toString();
+        String descShort = ((EditText) findViewById(R.id.shortdescription) ).getText().toString();
         ImageView img = (ImageView) findViewById(R.id.icon);
-        Bitmap i = null;
 
-        account e = b.getAccount(emailString);
-        listing li = new listing(s,e,s2,s3,i);
-        b.addListing(li);
+
+        account projectCreator = db.getAccount(emailString);
+        listing newlisting = new listing(title,projectCreator,descPrivate,descShort,null);
+        db.addListing(newlisting);
         startActivity(madeProject);
         //go to searchprojectsActivity, where user can search thru all projects in database
     }
