@@ -1,13 +1,16 @@
 package com.example.a.ycphack2018;
 
 import android.graphics.Bitmap;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class listing {
+public class listing implements Serializable
+{
 
     public enum tag{UMD,YCP,WEB,DESIGN,ENGINEER,JAVA,C};
+    private String title;
+    private static int key;
     private account lister;
     private ArrayList<account> contributers;
     private String description;
@@ -17,14 +20,18 @@ public class listing {
     private int outOf;
     private boolean isPrivate;
     private Bitmap icon;
-    public String key;
 
-    public listing(account init, String disc, String shortdes, Bitmap pic){
+    public listing(String title, account init, String disc, String shortdes, Bitmap pic)
+    {
+        this.title = title;
         this.lister=init;
         this.description=disc;
         this.shortdes=shortdes;
         this.icon=pic;
     }
+
+    public String getTitle() { return this.title; }
+    public int getKey() { return this.key; }
 
     public void makePrivate(){
         this.isPrivate=true;
