@@ -10,13 +10,13 @@ import android.view.View;
 
 public class HomeMenuActivity extends AppCompatActivity {
 
-    String emailString;
+    int emailString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        emailString = getIntent().getExtras().getString("email");
+        emailString = getIntent().getExtras().getInt("email");
         setContentView(R.layout.homemenu);
     }
     public void onMyProjectsPortal(View v) //called when user presses "myprojects" button

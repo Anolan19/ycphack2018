@@ -34,7 +34,10 @@ public class CreatorAccountActivity extends AppCompatActivity {
             account userAccount = new account(displayNameString, bioString, emailString,
                     null, null);
             //add the user account to the database
-            accountIntent.putExtra("email", emailString);
+            accountIntent.putExtra("email", userAccount.getKey());
+
+            DBHelper b = new DBHelper(this,"chad thundercock",null,0);
+            b.addAccount(userAccount);
             startActivity(accountIntent);//go to HomeMenuActivity--your account dashboard
         }
         else{
