@@ -56,8 +56,8 @@
                         android:layout_marginTop="24dp"
                         android:layout_marginEnd="16dp"
                         android:ems="10"
+                        android:hint="Project Title"
                         android:inputType="textPersonName"
-                        android:text="Project Title"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView4"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -72,8 +72,8 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:ems="10"
+                    android:hint="Short Description (Max 280 Characters)"
                     android:inputType="textMultiLine"
-                    android:text="Short Description (Max 280 Characters)"
                     app:layout_constraintBottom_toTopOf="@+id/longpublic"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -88,8 +88,8 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:ems="10"
+                    android:hint="Public Description"
                     android:inputType="textMultiLine"
-                    android:text="Public Description"
                     app:layout_constraintBottom_toTopOf="@+id/privatedescription"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +103,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:ems="10"
+                    android:hint="Additional Info (Private)"
                     android:inputType="textMultiLine"
-                    android:text="Additional Info (Private)"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/longpublic" />
@@ -113,7 +113,7 @@
                     android:id="@+id/usercomment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="User: Comment"
+                    android:text=" (placeholder for other comments)"
                     android:textSize="24sp"
                     tools:layout_editor_absoluteX="135dp"
                     tools:layout_editor_absoluteY="432dp" />
@@ -123,8 +123,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Comment "
                     android:inputType="textMultiLine"
-                    android:text="Comment"
                     tools:layout_editor_absoluteX="72dp"
                     tools:layout_editor_absoluteY="460dp" />
 
