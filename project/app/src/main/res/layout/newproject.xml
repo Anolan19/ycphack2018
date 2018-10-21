@@ -135,6 +135,7 @@
             android:backgroundTint="@color/colorPrimaryDark"
             android:elevation="1dp"
             android:text="Create Project"
+            android:onClick="onMakeProject"
             app:layout_constraintBottom_toBottomOf="@+id/scrolling"
             app:layout_constraintEnd_toStartOf="@+id/scrolling"
             app:layout_constraintHorizontal_bias="0.5"

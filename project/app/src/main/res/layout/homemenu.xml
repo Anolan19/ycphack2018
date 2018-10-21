@@ -67,6 +67,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:elevation="1dp"
+        android:onClick="onMyProjectsPortal"
         android:text="My Projects"
         app:layout_constraintBottom_toTopOf="@+id/newproject"
         app:layout_constraintEnd_toEndOf="parent"

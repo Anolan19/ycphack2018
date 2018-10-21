@@ -19,7 +19,10 @@ public class searchprojectsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.searchprojects);
-        final ArrayList<account> listofEvents= new ArrayList<>();
+         ArrayList<account> listofEvents= new ArrayList<>();
+         DBHelper j = new DBHelper(this,null,null,0);
+
+         ArrayList<listing> ad = j.findListing();
 
 
 
