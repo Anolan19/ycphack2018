@@ -150,17 +150,20 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return null;
     }
-}
-    /*
-    public listing findListing(String searchTerm)
-    {   String query = "SELECT * FROM " + TABLE_LISTINGS + " WHERE " +
-            COLUMN_LISTINGNAME + " = \"" + searchTerm + "\"";
+
+
+    public listing findListing(String searchTerm) {
+        String query = "SELECT * FROM " + TABLE_LISTINGS + " WHERE " +
+                COLUMN_LISTINGNAME + " = \"" + searchTerm + "\"";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
+
+
         return null;
+
     }
-*/
+}
 
 
 

@@ -29,7 +29,7 @@ public class account implements Serializable
         this.bio = bio;
         this.user_tags = tags;
         this.profilepic = profilepic;
-        this.key=
+        this.key=email.hashCode();
     }
 
     public String getName() { return this.name; }
