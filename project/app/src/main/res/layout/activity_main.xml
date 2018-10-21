@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <Button
         android:id="@+id/newaccount"
@@ -44,20 +44,20 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/login"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="108dp"
         android:layout_marginBottom="195dp"
         app:layout_constraintBottom_toTopOf="@+id/legaldisclaimer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/legaldisclaimer"
@@ -69,7 +69,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/ubuntu"
         android:text="Legal Disclaimer blah blah blah blah blah bafjladbfabelgjblaejbgv"
-        android:textColor="@color/cardview_light_background"
+        android:textColor="@color/cardview_dark_background"
         android:textStyle="bold"
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
