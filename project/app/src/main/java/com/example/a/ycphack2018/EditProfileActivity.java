@@ -8,7 +8,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     int emailString;
     DBHelper db;
-    account userAccount;
+    //account userAccount;
     EditText displayName;
     EditText userbio;
 
@@ -18,12 +18,12 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         emailString = getIntent().getExtras().getInt("email");
         setContentView(R.layout.editprofile);
-
+/*
         displayName = findViewById(R.id.displayname);
         userbio = findViewById(R.id.bio);
         db = new DBHelper(this,null,null,1);
-        userAccount = db.getAccount(emailString);
+        account userAccount = db.getAccount(emailString);
         displayName.setText(userAccount.getName());
         userbio.setText(userAccount.getBio());
-    }
+*/  }
 }
