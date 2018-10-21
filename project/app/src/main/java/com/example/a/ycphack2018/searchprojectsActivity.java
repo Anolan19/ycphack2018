@@ -22,7 +22,7 @@ public class searchprojectsActivity extends AppCompatActivity {
          ArrayList<account> listofEvents= new ArrayList<>();
          DBHelper j = new DBHelper(this,null,null,0);
 
-         ArrayList<listing> ad = j.findListing();
+       //  ArrayList<listing> ad = j.findListing();
 
 
 
