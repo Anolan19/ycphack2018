@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class CreatorAccountActivity extends AppCompatActivity {
@@ -36,7 +37,11 @@ public class CreatorAccountActivity extends AppCompatActivity {
             accountIntent.putExtra("email", emailString);
             startActivity(accountIntent);//go to HomeMenuActivity--your account dashboard
         }
-        else; //display error message, "Not a recognized user/password combo" etc.
+        else;{
+            //display error message, "Not a recognized user/password combo" etc.
+        Toast.makeText(this, "Please enter a valid university email address!", Toast.LENGTH_LONG).show();
+
+    }
     }
     public boolean userVerify(String email, String password)
     {   /*
@@ -45,6 +50,12 @@ public class CreatorAccountActivity extends AppCompatActivity {
         - check that the email isn't already registered with an account
         - check that the email and password match
         */
-        return true;
+
+        if (!(email.contains("@")&&email.contains(".edu"))){
+        return false;
+        }
+        else{
+            return true;
+        }
     }
 }

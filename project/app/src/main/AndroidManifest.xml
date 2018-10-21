@@ -23,6 +23,11 @@
         <activity android:name=".AccountTypeActivity"></activity>
         <activity android:name=".CreatorAccountActivity"></activity>
         <activity android:name=".EditProfileActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".NewProjectActivity"></activity>
+        <activity android:name=".MyProjectsActivity"></activity>
+        <activity android:name=".HomeMenuActivity"></activity>
+
     </application>
 
 </manifest>
