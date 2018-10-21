@@ -13,5 +13,8 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         emailString = getIntent().getExtras().getInt("email");
         setContentView(R.layout.editprofile);
+        DBHelper r= new DBHelper(this,null,null,2092939);
+        account a = r.getAccount(emailString);
+
     }
 }

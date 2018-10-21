@@ -67,7 +67,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:checked="true"
-        android:text="sre"
+        android:text="Design"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toStartOf="@+id/checkBox"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
